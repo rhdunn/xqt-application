@@ -17,6 +17,13 @@
   "preview": true,
   "main": "./out/extension.js",
   "contributes": {
+    "languages": [
+      {
+        "id": "xquery",
+        "extensions": [".xq", ".xqy", ".xquery", ".xqu", ".xql", ".xqm", ".xqws"],
+        "aliases": ["XQuery", "XML Query"]
+      }
+    ]
   },
   "activationEvents": [
   ],
