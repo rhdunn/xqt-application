@@ -53,6 +53,14 @@ kotlin {
         else -> throw GradleException("Host OS is not supported in Kotlin/Native.")
     }
 
+    nativeTarget.apply {
+        binaries {
+            executable {
+                entryPoint = "xqt.application.xqtc.main"
+            }
+        }
+    }
+
     sourceSets {
         val commonMain by getting {
             kotlin.srcDir("commonMain")

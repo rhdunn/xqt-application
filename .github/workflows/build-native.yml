@@ -22,5 +22,11 @@ jobs:
       - name: Build for Kotlin/Native
         run: ./gradlew nativeMainKlibrary
 
+      - name: Run (Release) for Kotlin/JVM
+        run: ./gradlew runReleaseExecutableNative
+
+      - name: Run (Debug) for Kotlin/JVM
+        run: ./gradlew runDebugExecutableNative
+
       - name: Test for Kotlin/Native
         run: ./gradlew nativeTest
