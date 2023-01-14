@@ -48,6 +48,12 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
 
+      - name: Run (Production) for Kotlin/JVM
+        run: ./gradlew jsNodeProductionRun
+
+      - name: Run (Development) for Kotlin/JVM
+        run: ./gradlew jsNodeDevelopmentRun
+
       - name: Test for Kotlin/JS IR on Node
         run: ./gradlew jsIrNodeTest
 

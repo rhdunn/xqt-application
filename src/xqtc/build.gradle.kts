@@ -18,29 +18,8 @@ kotlin {
         }
     }
 
-    js(BOTH) {
-        browser {
-            testTask {
-                useKarma {
-                    when (System.getProperty("js.browser")) {
-                        "Chrome" -> useChromeHeadless()
-                        "Chrome Canary" -> useChromeCanaryHeadless()
-                        "Chromium" -> useChromiumHeadless()
-                        "Firefox" -> useFirefoxHeadless()
-                        "Firefox Aurora" -> useFirefoxAuroraHeadless()
-                        "Firefox Developer" -> useFirefoxDeveloperHeadless()
-                        "Firefox Nightly" -> useFirefoxNightlyHeadless()
-                        "Phantom JS" -> usePhantomJS()
-                        "Safari" -> useSafari()
-                        else -> when (System.getProperty("os.name")) {
-                            "Mac OS X" -> useSafari()
-                            else -> useFirefoxHeadless()
-                        }
-                    }
-                }
-            }
-        }
-
+    js(IR) {
+        binaries.executable()
         nodejs {
         }
     }
