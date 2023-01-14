@@ -1,6 +1,7 @@
 plugins {
     kotlin("multiplatform") version "1.7.20"
     id("maven-publish")
+    application
 }
 
 group = "xqtc"
@@ -84,4 +85,8 @@ kotlin {
             kotlin.srcDir("nativeTest")
         }
     }
+}
+
+application {
+    mainClass.set("xqt.application.xqtc.MainKt")
 }

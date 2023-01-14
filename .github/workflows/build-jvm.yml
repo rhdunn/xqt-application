@@ -28,5 +28,8 @@ jobs:
       - name: Build for Kotlin/JVM
         run: ./gradlew -D jvm.target=${{ matrix.java }} jvmJar
 
+      - name: Run for Kotlin/JVM
+        run: ./gradlew -D jvm.target=${{ matrix.java }} run
+
       - name: Test for Kotlin/JVM
         run: ./gradlew -D jvm.target=${{ matrix.java }} jvmTest
